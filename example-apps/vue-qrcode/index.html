@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue QR Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="form-container">
+        <h1><a href="/">Vue Qr Code Generator</a></h1>
+        <qr-text-input 
+          @text-value="onTextValue">
+        </qr-text-input>
+      </div>
+      <p v-if="isPristine" class="instructions">
+        Crea il tuo codice QR compilando il campo di testo
+        e premi il pulsante <strong>GENERA CODICE QR</strong>
+      </p>
+      <qr-display :value="textValue" v-else></qr-display>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.2/build/qrcode.min.js"></script>
+    
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

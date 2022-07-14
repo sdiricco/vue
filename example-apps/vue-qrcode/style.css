@@ -1,0 +1,211 @@
+:root {
+  --primary-color-100: hsl(171, 100%, 94%);
+  --primary-color-200: hsl(170, 94%, 87%);
+  --primary-color-300: hsl(169, 80%, 74%);
+  --primary-color-400: hsl(169, 65%, 59%);
+  --primary-color-500: hsl(170, 57%, 50%);
+  --primary-color-600: hsl(185, 62%, 45%);
+  --primary-color-700: hsl(184, 77%, 34%);
+  --primary-color-900: hsl(169, 91%, 17%);
+
+  --bg-color-100: hsl(40, 23%, 94%);
+  --bg-color-300: hsl(40, 15%, 80%);
+  --bg-color-400: hsl(39, 11%, 69%);
+  --bg-color-500: hsl(41, 8%, 61%);
+  --bg-color-600: hsl(41, 8%, 48%);
+
+  --error-color-500: hsl(350, 66%, 48%);
+}
+
+html {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: var(--bg-color-100);
+}
+
+
+#root {
+  height: 100%;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary-color-100);
+  font-size: 1rem;
+  background: url(img/logo.svg) center no-repeat;
+  background-size: cover;
+  font-size: 0;
+}
+
+h1 a {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+.form-container {
+  background-color: #52dac1;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2337c8b0' fill-opacity='0.32'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  height: 20%;
+  position: relative;
+  padding: 1.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  z-index: 100;
+  background-color: white;
+  width: 50%;
+  min-width: 33rem;
+  min-height: 2rem;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .12), 0px 2px 4px rgba(0, 0, 0, .15);
+}
+
+::placeholder {
+  color: var(--bg-color-400);
+}
+
+input {
+  height: 2rem;
+  flex: 2;
+  background-color: var(--bg-color-100);
+  border: 1px solid var(--bg-color-100);
+  border-radius: .25rem;
+  padding: .5rem;
+  font-size: 1rem;
+  margin-right: 1.5rem;
+  color: var(--bg-color-600);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--bg-color-300);
+}
+
+.btn {
+  text-align: center;
+  display: block;
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-color-900);
+  border-radius: .25rem;
+  cursor: pointer;
+  border: none;
+  padding: .5rem;
+  background-color: var(--primary-color-500);
+}
+
+.btn:hover {
+  background-color: var(--primary-color-600);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, .14);
+}
+
+.btn:focus {
+  background-color: var(--primary-color-600);
+  outline: none;
+  box-shadow: 0px 4px 6px rgba(0,0,0, .14);
+}
+
+.btn:active {
+  background-color: var(--primary-color-700);
+  outline: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .20);
+  transform: scale(.95);
+}
+
+
+.instructions {
+  position: absolute;
+  margin: 12rem auto 0;
+  width: 33rem;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--bg-color-600);
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.display-container {
+  display: flex;
+  margin: 6rem auto 0;
+  background-color: white;
+  z-index: 100;
+  min-width: 33rem;
+  width: 50%;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .12), 0px 2px 4px rgba(0, 0, 0, .15);
+}
+
+.display {
+  position: relative;
+  width: 67%;
+  padding-top: 50%;
+}
+
+.qr-code {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.download-area {
+  width: 33%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-area .btn {
+  line-height: .9rem;
+  margin: 1rem 0;
+  padding: .6rem;
+  width: 100%;
+  font-size: .8em;
+  text-decoration: none;
+}
+
+.download-area .btn small {
+  font-size: .6rem;
+  color: var(--primary-color-300);
+}
+
+.error {
+  text-align: left;
+  font-size: .9em;
+  line-height: 1.5;
+  color: var(--error-color-500);
+  display: flex;
+  align-items: center;
+}
+
+.error-icon {
+  flex: 1;
+  padding: .8em;
+}

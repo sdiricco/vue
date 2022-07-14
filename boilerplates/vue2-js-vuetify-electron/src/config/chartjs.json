@@ -1,0 +1,63 @@
+{
+  "spanGaps": true,
+  "showLine": false,
+  "datasets": { "line": { "pointRadius": 0 } },
+  "elements": { "point": { "radius": 0 } },
+  "maintainAspectRatio": false,
+  "responsive": true,
+  "aspectRatio": 1,
+  "responsiveAnimationDuration": 0,
+  "animation": false,
+  "plugins": { "streaming": { "frameRate": 10 } },
+  "legend": { "display": true, "position": "top", "fullWidth": true },
+  "title": {
+    "display": true,
+    "position": "top",
+    "fontSize": "24",
+    "fontFamily": "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+    "fontColor": "#666",
+    "fontStyle": "bold",
+    "padding": 10,
+    "text": "REGULATION_DIN4150_3_256_80HZ_CUSTOM"
+  },
+  "scales": {
+    "xAxes": [
+      {
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Time",
+          "fontColor": "#666",
+          "fontFamily": "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+          "fontSize": 12,
+          "fontStyle": "normal"
+        },
+        "type": "realtime",
+        "display": true,
+        "title": { "display": true, "text": "Time" },
+        "realtime": {
+          "duration": 5000,
+          "refresh": 800,
+          "ttl": 7000,
+          "delay": 1000
+        },
+        "ticks": { "display": false, "maxRotation": 0, "minRotation": 0 },
+        "gridLines": { "display": false }
+      }
+    ],
+    "yAxes": [
+      {
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Y value",
+          "fontColor": "#666",
+          "fontFamily": "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+          "fontSize": 12,
+          "fontStyle": "normal"
+        },
+        "type": "linear",
+        "ticks": { "display": true, "max": 32767, "min": -32767 },
+        "gridLines": { "display": true }
+      }
+    ]
+  }
+}

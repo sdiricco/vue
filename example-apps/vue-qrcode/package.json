@@ -1,0 +1,20 @@
+{
+  "name": "qr-code-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple qr code generator made with vue",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx serve"
+  },
+  "keywords": [],
+  "author": "Claudio Marotta",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://clau4io@bitbucket.org/clau4io/qr-code-example.git"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}
