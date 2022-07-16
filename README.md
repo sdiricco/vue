@@ -1,2 +1,2 @@
-# vue-2
-A collection of documents, examples and boilerplates for vue2
+# Vue
+A collection of documents, examples and boilerplates for vue2 and vue3
