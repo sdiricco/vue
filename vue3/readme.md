@@ -5,6 +5,8 @@
 - Vue3
 - Vue Router
 - Pinia
+- AntD design
+- Electron
 - Typescript
 
 ## Usage

@@ -1,4 +1,4 @@
-import { app, BrowserWindow, shell, ipcMain } from 'electron'
+import { app, BrowserWindow, shell, ipcMain, dialog } from 'electron'
 import { release } from 'os'
 import { join } from 'path'
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
@@ -112,4 +112,8 @@ ipcMain.handle('open-win', (event, arg) => {
     childWindow.loadURL(`${url}/#${arg}`)
     // childWindow.webContents.openDevTools({ mode: "undocked", activate: true })
   }
+})
+
+ipcMain.handle("electron/show-message-box", async(_evt, msg)=>{
+  await dialog.showMessageBox(win, {message: msg, type:"question", title: "Message" })
 })
