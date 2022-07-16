@@ -1,8 +1,18 @@
-# Vs code extensions
+# Vue3 - Electron Boilerplate
 
-- [Vue Volar extensions Pack](https://marketplace.visualstudio.com/items?itemName=MisterJ.vue-volar-extention-pack)
+## Caratteristiche
 
-# Installation
+- Vue3
+- Vue Router
+- Pinia
+- Typescript
 
-Follow [vue3 installation](https://vuejs.org/guide/quick-start.html)
+## Usage
+
+```sh
+yarn install
+yarn dev
+```
+
+
 
